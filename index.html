@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💜 TOPIK 韓檢寫作 51-54 題重點整理</title>
+    <!-- Tailwind CSS CDN 確保樣式精美 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 pb-20">
+
+    <!-- 頂部標題區 -->
+    <header class="bg-purple-900 text-white p-5 text-center shadow-md rounded-b-3xl">
+        <h1 class="text-lg font-bold tracking-wide flex items-center justify-center gap-2">
+            <span>💜</span> TOPIK II 韓檢寫作 51-54 題攻略
+        </h1>
+        <p class="text-xs text-purple-200 mt-1">高分過關必看！核心技巧與常用句型</p>
+        
+        <!-- 功能按鈕 -->
+        <div class="flex justify-center gap-3 mt-4">
+            <button onclick="alert('已複製所有重點！')" class="bg-white text-purple-900 text-xs font-semibold px-4 py-2 rounded-xl shadow hover:bg-purple-50 transition">
+                複製重點
+            </button>
+            <button onclick="window.print()" class="bg-purple-800 text-white text-xs font-semibold px-4 py-2 rounded-xl border border-purple-600 shadow hover:bg-purple-700 transition">
+                存成 PDF
+            </button>
+        </div>
+    </header>
+
+    <!-- 分頁標籤列 (51-54題) -->
+    <div class="max-w-md mx-auto px-4 mt-4">
+        <div class="flex bg-white p-1.5 rounded-2xl shadow-sm border border-gray-100 justify-between">
+            <button onclick="switchTab(51)" id="tab-51" class="tab-btn flex-1 py-2 text-center text-xs font-bold rounded-xl transition bg-purple-700 text-white shadow">
+                第 51 題<br><span class="text-[10px] font-normal opacity-90">實用短文</span>
+            </button>
+            <button onclick="switchTab(52)" id="tab-52" class="tab-btn flex-1 py-2 text-center text-xs font-bold rounded-xl transition text-gray-500 hover:text-purple-700">
+                第 52 題<br><span class="text-[10px] font-normal opacity-90">客觀陳述</span>
+            </button>
+            <button onclick="switchTab(53)" id="tab-53" class="tab-btn flex-1 py-2 text-center text-xs font-bold rounded-xl transition text-gray-500 hover:text-purple-700">
+                第 53 題<br><span class="text-[10px] font-normal opacity-90">圖表作文</span>
+            </button>
+            <button onclick="switchTab(54)" id="tab-54" class="tab-btn flex-1 py-2 text-center text-xs font-bold rounded-xl transition text-gray-500 hover:text-purple-700">
+                第 54 題<br><span class="text-[10px] font-normal opacity-90">申論作文</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 內容卡片區域 -->
+    <main class="max-w-md mx-auto px-4 mt-4 space-y-4" id="content-container">
+        <!-- 內容會透過 JavaScript 動態載入 -->
+    </main>
+
+    <!-- 底部導覽列 -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-2 px-6 flex justify-around items-center shadow-lg max-w-md mx-auto rounded-t-2xl">
+        <div class="text-center text-purple-700 cursor-pointer">
+            <div class="text-lg">📚</div>
+            <span class="text-[10px] font-bold">重點整理</span>
+        </div>
+        <div class="text-center text-gray-400 cursor-pointer hover:text-purple-700">
+            <div class="text-lg">✍️</div>
+            <span class="text-[10px] font-medium">常用句型</span>
+        </div>
+        <div class="text-center text-gray-400 cursor-pointer hover:text-purple-700">
+            <div class="text-lg">🎯</div>
+            <span class="text-[10px] font-medium">考古題庫</span>
+        </div>
+    </nav>
+
+    <!-- JavaScript 邏輯 -->
+    <script>
+        // 各題型的重點資料
+        const studyData = {
+            51: [
+                {
+                    time: "配分與目標：10 分 / 拿滿分",
+                    title: "生活實用短文填空（實用文體）",
+                    tag: "格式：해요체 / 아/어 주세요",
+                    detail: "通常是邀請信、道歉信、申請信或通知。注意上下文語氣（通常是해요체禮貌非格式體），看清前後文是需要填「原因」、「時間」、「地點」或「請求」。",
+                    note: "💡 必背句型：~(으)ㄹ 수 있어요?, ~아/어 주시겠습니까?"
+                },
+                {
+                    time: "失分地雷注意",
+                    title: "敬語與時態確認",
+                    tag: "文法細節",
+                    detail: "檢查空格前後的主詞是誰，是否需要使用尊敬語（시）。時態（過去式 았/었、未來式 겠/을 거예요）必須與前後句保持高度一致。",
+                    note: "💡 練習技巧：多寫歷屆試題的 51 題，抓出固定的空格邏輯（如：告知原因 + 提出請求）。"
+                }
+            ],
+            52: [
+                {
+                    time: "配分與目標：10 分",
+                    title: "客觀資訊 / 常識填空（文章接續）",
+                    tag: "格式：하십시오체 (는다/ㄴ다)",
+                    titleClass: "text-amber-800",
+                    detail: "通常是說明文、報導或調查結果。文體必須使用書面語、客觀陳述句（는다/ㄴ다/다 結尾，不用해요체）。",
+                    note: "💡 核心考點：因果關係（~기 때문에, ~므로）、轉折關係（~지만, ~는 반면에）。"
+                },
+                {
+                    time: "常見句尾搭配",
+                    title: "名詞形與被動/使動表現",
+                    tag: "高分關鍵",
+                    detail: "常考「~는 것으로 나타났다」（調查顯示...）、「~에 대한 관심이 높아지고 있다」（對...的關心正在提高）。",
+                    note: "💡 提示：前後兩句的句型結構經常具有對稱性，可以從前後句推導答案的文法。"
+                }
+            ],
+            53: [
+                {
+                    time: "配分與目標：30 分（大重點）",
+                    title: "圖表數據分析與說明文",
+                    tag: "字數：200~300 字",
+                    detail: "需完整交代：1. 主題是什麼、2. 調查對象/機構、3. 數據變化趨勢（增加、減少、持平）、4. 原因或預期影響。",
+                    note: "💡 必背架構：調查結果顯示... 原因是... 預計未來會..."
+                },
+                {
+                    time: "萬用數據句型",
+                    title: "趨勢描述詞彙",
+                    tag: "詞彙庫",
+                    detail: "• 增加：증가하다, 늘어나다, 오르다\n• 減少：감소하다, 줄어들다, 내려가다\n• 佔比例：~를 차지했다, ~에 달했다",
+                    note: "💡 注意：絕對不要出現個人主觀情緒或「我認為」，必須保持百分之百的客觀客觀說明體。"
+                }
+            ],
+            54: [
+                {
+                    time: "配分與目標：50 分（決戰關鍵）",
+                    title: "申論題 / 自選主題論說文",
+                    tag: "字數：600~700 字",
+                    detail: "給定一個引言與三個必須回答的小問題（例如：該現象的原因、正反面影響、解決方案）。評分標準包含：內容是否切題、組織是否連貫、詞彙與文法是否高級。",
+                    note: "💡 三段式結構：前言（點題+引發興趣） -> 本論（回答三個子問題） -> 結論（總結+提出展望）。"
+                },
+                {
+                    time: "高級詞彙與連接詞",
+                    title: "提升文章質感",
+                    tag: "高分武器",
+                    detail: "多使用高級書面語如：\n• ~에 지대한 영향을 미치다（造成巨大影響）\n• ~을/를 바탕으로（以...為基礎）\n• 반면에 / 한편으로는（另一方面）",
+                    note: "💡 建議平時多看韓國社論，累積對社會議題（如科技發展、教育、環境）的論述觀點。"
+                }
+            ]
+        };
+
+        // 切換分頁的函數
+        function switchTab(questionNum) {
+            // 更新按鈕樣式
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn flex-1 py-2 text-center text-xs font-bold rounded-xl transition text-gray-500 hover:text-purple-700 bg-transparent shadow-none";
+            });
+            const activeBtn = document.getElementById(`tab-${questionNum}`);
+            activeBtn.className = "tab-btn flex-1 py-2 text-center text-xs font-bold rounded-xl transition bg-purple-700 text-white shadow";
+
+            // 渲染對應內容
+            const container = document.getElementById('content-container');
+            container.innerHTML = '';
+
+            studyData[questionNum].forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-4 rounded-2xl shadow-sm border border-purple-100 relative overflow-hidden";
+                card.innerHTML = `
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-purple-600"></div>
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs font-bold text-amber-700">${item.time}</span>
+                        <span class="text-[10px] bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full font-medium">${item.tag}</span>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 mb-2">${item.title}</h3>
+                    <p class="text-xs text-gray-600 whitespace-pre-line leading-relaxed mb-3">${item.detail}</p>
+                    <div class="bg-purple-50 text-purple-900 text-xs p-2.5 rounded-xl border border-purple-100 font-medium">
+                        ${item.note}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // 初始化載入第 51 題
+        switchTab(51);
+    </script>
+</body>
+</html>
